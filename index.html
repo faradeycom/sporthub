@@ -463,10 +463,9 @@ function openState(){
 // «now in the gym» from the app: administrators and trainers on shift, visitors inside (public.site_now)
 let NOW=null;
 function nowHtml(l){
-  if(!NOW)return '';const a=NOW.admins||[],t=NOW.trainers||[],v=+NOW.visitors||0;
-  if(!a.length&&!v)return '';
-  return (a.length?`<div class="open"><span class="dot on"></span><span>${a.length>1?l.adminN:l.admin1}: ${esc(a.map(nm).join(', '))}</span></div>`:'')+
-   `<div class="ingym"><span class="h">${l.inGym}</span><div class="r"><span>${l.visNow}</span><b class="num">${v}</b></div></div>`;
+  // only the number of visitors inside — no staff names on the site (owner's decision 2026-09-28)
+  if(!NOW)return '';const v=+NOW.visitors||0;
+  return `<div class="ingym"><span class="h">${l.inGym}</span><div class="r"><span>${l.visNow}</span><b class="num">${v}</b></div></div>`;
 }
 function render(){
   const l=L();
@@ -484,7 +483,7 @@ function render(){
     <div class="cta"><a class="btn primary" href="#prices">${l.toPrices}</a><a class="btn" href="#contacts">${l.toTrial}</a></div></div>
    <div class="band">
     <div class="open"><span class="dot ${st.open?'on':''}"></span><span class="num">${st.txt}</span></div>
-    ${nowHtml(l)}
+    ${st.open?nowHtml(l):''}
     <div class="facts">
      <div class="fact"><b class="num">${area}</b><span>${l.m2}</span></div>
      <div class="fact"><b class="num">${eqN}</b><span>${l.eq}</span></div>
