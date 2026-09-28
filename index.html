@@ -612,7 +612,7 @@ function applyStaff(list){
   if(trs.length)C.trainers=trs.map(s=>({n:s.name,r:{uk:s.pos_uk||'Тренер',ru:s.pos_ru||s.pos_uk||'Тренер'},s:{uk:split(s.spec_uk),ru:split(s.spec_ru||s.spec_uk)},y:s.years||0,photo:s.photo_url||'',bio:{uk:s.bio_uk||'',ru:s.bio_ru||s.bio_uk||''}}));
   // the staff list comes from the app: no demo names once it is loaded; the role line follows the roles
   C.staff=adm.map(s=>{const r=s.roles||[],own=r.includes('owner'),at=r.includes('admin')&&r.includes('trainer');
-    return{n:s.name,r:{uk:(own?'Керівник залу':'Адміністратор')+(at?' · Адміністратор / Тренер':''),ru:(own?'Руководитель зала':'Администратор')+(at?' · Администратор / Тренер':''),en:(own?'Gym manager':'Front desk')+(at?' · Front desk / Trainer':'')}};});
+    return{n:s.name,r:{uk:(own?'Керівник залу':'Адміністратор')+(at?' / Адміністратор / Тренер':''),ru:(own?'Руководитель зала':'Администратор')+(at?' / Администратор / Тренер':''),en:(own?'Gym manager':'Front desk')+(at?' / Front desk / Trainer':'')}};});
   return true;
 }
 const SRC=[['sporthub-site',applySite,'site_content?id=eq.1&select=data',r=>r[0]&&r[0].data&&Object.keys(r[0].data).length?r[0].data:null],
