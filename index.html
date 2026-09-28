@@ -464,9 +464,9 @@ function openState(){
 let NOW=null;
 function nowHtml(l){
   if(!NOW)return '';const a=NOW.admins||[],t=NOW.trainers||[],v=+NOW.visitors||0;
-  if(!a.length&&!t.length&&!v)return '';
+  if(!a.length&&!v)return '';
   return (a.length?`<div class="open"><span class="dot on"></span><span>${a.length>1?l.adminN:l.admin1}: ${esc(a.map(nm).join(', '))}</span></div>`:'')+
-   `<div class="ingym"><span class="h">${l.inGym}</span><div class="r"><span>${l.trNow}</span><b>${t.length?esc(t.map(nm).join(', ')):l.noTr}</b></div><div class="r"><span>${l.visNow}</span><b class="num">${v}</b></div></div>`;
+   `<div class="ingym"><span class="h">${l.inGym}</span><div class="r"><span>${l.visNow}</span><b class="num">${v}</b></div></div>`;
 }
 function render(){
   const l=L();
