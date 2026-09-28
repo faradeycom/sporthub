@@ -262,7 +262,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;font-size:13px;c
   <a class="brand" href="#top">SPORT HUB</a>
   <nav class="links" id="nav"></nav>
   <a class="btn primary sm appbtn" id="appBtn"></a>
-  <div class="seg" id="langSeg"><button data-lang="uk">UA</button><button data-lang="ru">RU</button></div>
+  <div class="seg" id="langSeg"><button data-lang="uk">UA</button><button data-lang="ru">RU</button><button data-lang="en">EN</button></div>
 </div></header>
 
 <main id="top">
@@ -362,7 +362,7 @@ const C={
 
 /* ===== Тексти інтерфейсу ===== */
 const T={
-uk:{loc:'uk-UA',cur:'₴',min:'хв',demo:'Ціни, розклад, тренери й обладнання на сторінці поки приклад. Адреса й телефон справжні.',
+uk:{loc:'uk-UA',cur:'₴',min:'хв',at:'о',sqm:'м²',demo:'Ціни, розклад, тренери й обладнання на сторінці поки приклад. Адреса й телефон справжні.',
  nav:{about:'Про зал',equipment:'Обладнання',classes:'Заняття',team:'Команда',prices:'Ціни',contacts:'Контакти',find:'Як нас знайти'},
  fEy:'Як нас знайти',fH:'Кривий Ріг, Павла Глазового, 15',fP:'Натисніть «Прокласти маршрут», і Google Карти поведуть вас прямо до входу в зал.',route:'Прокласти маршрут',openMap:'Відкрити в Google Картах',routeHint:'На телефоні відкриється застосунок Google Карти з маршрутом від вашого місця.',
  heroEy:'Sport Hub · тренажерний зал у Кривому Розі',heroH:'Зал без черги <em>до тренажерів</em>',heroP:'Невеликий зал з фірмовим обладнанням. Силова зона, пілатес, фітнес і воркаут для дорослих, окремі групи для дітей і підлітків. Тепло взимку, душ і роздягальня.',
@@ -376,7 +376,7 @@ uk:{loc:'uk-UA',cur:'₴',min:'хв',demo:'Ціни, розклад, трене�
  cEy:'Контакти',cH:'Години роботи',addr:'Адреса',phone:'Телефон',copy:'Копіювати',copied:'Скопійовано',copyFail:'Виділіть номер і скопіюйте вручну',
  appBtn:'Відкрити застосунок',appBtnS:'Застосунок',
  wd:['Понеділок','Вівторок','Середа','Четвер','Пʼятниця','Субота','Неділя'],today:'сьогодні',foot:'Тренажерний зал'},
-ru:{loc:'ru-UA',cur:'₴',min:'мин',demo:'Цены, расписание, тренеры и оборудование на странице пока пример. Адрес и телефон настоящие.',
+ru:{loc:'ru-UA',cur:'₴',min:'мин',at:'в',sqm:'м²',demo:'Цены, расписание, тренеры и оборудование на странице пока пример. Адрес и телефон настоящие.',
  nav:{about:'О зале',equipment:'Оборудование',classes:'Занятия',team:'Команда',prices:'Цены',contacts:'Контакты',find:'Как нас найти'},
  fEy:'Как нас найти',fH:'Кривой Рог, Павла Глазового, 15',fP:'Нажмите «Проложить маршрут», и Google Карты приведут вас прямо ко входу в зал.',route:'Проложить маршрут',openMap:'Открыть в Google Картах',routeHint:'На телефоне откроется приложение Google Карты с маршрутом от вашего места.',
  heroEy:'Sport Hub · тренажёрный зал в Кривом Роге',heroH:'Зал без очереди <em>к тренажёрам</em>',heroP:'Небольшой зал с фирменным оборудованием. Силовая зона, пилатес, фитнес и воркаут для взрослых, отдельные группы для детей и подростков. Тепло зимой, душ и раздевалка.',
@@ -389,7 +389,21 @@ ru:{loc:'ru-UA',cur:'₴',min:'мин',demo:'Цены, расписание, т�
  prEy:'Цены',prH:'Абонементы и услуги',prP:'Цены в гривнах. Оплата на ресепшене наличными или картой.',
  cEy:'Контакты',cH:'Часы работы',addr:'Адрес',phone:'Телефон',copy:'Копировать',copied:'Скопировано',copyFail:'Выделите номер и скопируйте вручную',
  appBtn:'Открыть приложение',appBtnS:'Приложение',
- wd:['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],today:'сегодня',foot:'Тренажёрный зал'}
+ wd:['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],today:'сегодня',foot:'Тренажёрный зал'},
+en:{loc:'en-GB',cur:'₴',min:'min',at:'at',sqm:'m²',demo:'Prices, schedule, trainers and equipment on this page are examples for now. The address and phone are real.',
+ nav:{about:'About',equipment:'Equipment',classes:'Classes',team:'Team',prices:'Prices',contacts:'Contacts',find:'Find us'},
+ fEy:'Find us',fH:'Kryvyi Rih, 15 Pavla Hlazovoho St.',fP:'Tap «Get directions» and Google Maps will take you right to the gym entrance.',route:'Get directions',openMap:'Open in Google Maps',routeHint:'On a phone, the Google Maps app opens with a route from where you are.',
+ heroEy:'Sport Hub · a gym in Kryvyi Rih',heroH:'A gym with no queues <em>for the machines</em>',heroP:'A compact gym with branded equipment. Strength zone, pilates, fitness and street workout for adults, separate groups for kids and teens. Warm in winter, showers and a locker room.',
+ toPrices:'Prices',toTrial:'Trial session',openNow:'Open now, until',closedNow:'Closed now. We open at',m2:'m² of space',eq:'machines and stations',tr:'trainers',daily:'Mon–Fri, opening hours',dayOff:'Closed',trainOnly:'personal and group sessions by booking only',nextOn:'We open',tomorrow:'tomorrow',wdAt:['on Monday','on Tuesday','on Wednesday','on Thursday','on Friday','on Saturday','on Sunday'],
+ aboutEy:'About',aboutH:'Space and amenities',aboutP:'Floor area by zone, m².',total:'total area',
+ eqEy:'Equipment',eqH:'What we have for each type of training',eqP:'Machines and stations by zone.',units:'units',places:'places',
+ qT:'Branded equipment',qP:'All machines are branded, from trusted manufacturers. We service them regularly, so everything works and is safe.',
+ clsEy:'Classes',clsH:'For adults and kids',clsP:'Groups are small, so the trainer sees everyone. Book at the front desk or in the app.',adults:'Adults',kids:'Kids and teens',age:'years',group:'group',indiv:'personal',trainer:'Trainer',
+ teamEy:'Team',teamH:'Trainers and staff',teamP:'All our trainers have a relevant degree or certificates.',yrs:'years of experience',staffH:'Staff',
+ prEy:'Prices',prH:'Memberships and services',prP:'Prices in hryvnias (UAH). Pay at the front desk in cash or by card.',
+ cEy:'Contacts',cH:'Opening hours',addr:'Address',phone:'Phone',copy:'Copy',copied:'Copied',copyFail:'Select the number and copy it manually',
+ appBtn:'Open the app',appBtnS:'App',
+ wd:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],today:'today',foot:'Gym'}
 };
 const TRN={'Сергій':'Сергей','Віктор':'Виктор','Олена':'Елена','Марія':'Мария','Андрій':'Андрей','Тетяна':'Татьяна','Наталія':'Наталья','Ігор':'Игорь'};
 
@@ -406,11 +420,20 @@ try{
     if(adm.length)C.staff=adm.map(s=>({n:s.name,r:{uk:s.pos?.uk||(s.roles.includes('owner')?'Керівник залу':'Адміністратор'),ru:s.pos?.ru||s.pos?.uk||(s.roles.includes('owner')?'Руководитель зала':'Администратор')}}));
   }
 }catch(e){}
+
+/* English: database / built-in content is Ukrainian and Russian — ENX translates the known texts, ENN the names;
+   anything the owner writes later shows in Ukrainian until it is added here. */
+const ENX={"м. Кривий Ріг, вул. Павла Глазового, 15":"Kryvyi Rih, 15 Pavla Hlazovoho St.","Тренажерна зона":"Machine zone","Вільні ваги":"Free weights","Функціональна зона і воркаут":"Functional zone and street workout","Кардіо":"Cardio","Зала групових занять":"Group class studio","Роздягальня й душові":"Locker room and showers","Рецепція":"Front desk","Душ":"Shower","Шафки":"Lockers","Тепло":"Warm","Зручності":"Amenities","Душові кабіни":"Shower cabins","Можна прийняти душ після тренування.":"Take a shower after your workout.","Роздягальня":"Locker room","Індивідуальні шафки для ваших речей.":"Personal lockers for your belongings.","Опалення взимку":"Heating in winter","Комфортні умови для тренування взимку.":"Comfortable conditions for training in winter.","Кулер (тепла та холодна питна вода)":"Water cooler (hot and cold drinking water)","Силові тренажери":"Strength machines","Силові тренування, жіноча група, реабілітація":"Strength training, women's group, rehabilitation","Блокові та важільні тренажери, жим ногами 45°, машина Сміта, гіперекстензія":"Cable and lever machines, 45° leg press, Smith machine, hyperextension","Техніка базових вправ, силова підготовка":"Basic lift technique, strength training","3 силові рами, 5 лав. Гантелі 2–50 кг, 6 грифів, диски до 400 кг":"3 power racks, 5 benches. Dumbbells 2–50 kg, 6 bars, up to 400 kg of plates","Функціональний тренінг, кросфіт, воркаут, дитячі групи":"Functional training, CrossFit, street workout, kids groups","Турніки, бруси, шведська стінка, 4 петлі TRX, гирі 8–32 кг, плиобокси":"Pull-up bars, dip bars, wall bars, 4 TRX straps, kettlebells 8–32 kg, plyo boxes","Розминка, фітнес, схуднення":"Warm-up, fitness, weight loss","2 бігові доріжки, 2 велотренажери, еліптичний і гребний тренажери":"2 treadmills, 2 exercise bikes, an elliptical and a rowing machine","Місця для пілатесу і стретчингу":"Spots for pilates and stretching","Пілатес, стретчинг, дитячі заняття":"Pilates, stretching, kids classes","14 килимків, фітболи, ролики, еластичні стрічки":"14 mats, fitballs, foam rollers, resistance bands","Фітнес":"Fitness","Загальна фізична підготовка під музику, для будь-якого рівня.":"General conditioning to music, for any level.","Пн, Ср, Пт · 18:00":"Mon, Wed, Fri · 18:00","Пілатес":"Pilates","Глибокі м’язи, постава, гнучкість. Група до 12 людей.":"Deep muscles, posture, flexibility. Groups of up to 12.","Вт, Чт · 10:00 і 17:00":"Tue, Thu · 10:00 and 17:00","Воркаут":"Street workout","Вправи з власною вагою: підтягування, віджимання, бруси.":"Bodyweight exercises: pull-ups, push-ups, dips.","Вт, Чт · 18:00":"Tue, Thu · 18:00","Функціональний тренінг":"Functional training","Кругове тренування на витривалість і силу.":"Circuit training for endurance and strength.","Пн, Ср, Пт · 08:00":"Mon, Wed, Fri · 08:00","Техніка базових вправ":"Basic lift technique","Присідання, жим, тяга. Малі групи до 6 людей.":"Squat, press, deadlift. Small groups of up to 6.","Вт, Чт · 12:00":"Tue, Thu · 12:00","Стретчинг":"Stretching","Розтяжка та відновлення після силових.":"Stretching and recovery after strength work.","Ср · 10:00":"Wed · 10:00","Персональні тренування":"Personal training","Програма під вашу ціль, тренер поруч усе заняття.":"A programme for your goal, with the trainer by your side the whole session.","За домовленістю":"By appointment","Дитячий фітнес":"Kids fitness","Ігрова ОФП: координація, спритність, правильна постава.":"Playful conditioning: coordination, agility, good posture.","Пн, Ср · 16:30":"Mon, Wed · 16:30","Дитячий пілатес":"Kids pilates","Вправи для спини й постави на килимках.":"Back and posture exercises on mats.","Пн, Ср · 16:00":"Mon, Wed · 16:00","Воркаут для підлітків":"Street workout for teens","Турніки й бруси, перші підтягування, робота з власною вагою.":"Pull-up and dip bars, first pull-ups, bodyweight work.","Вт, Чт · 16:30":"Tue, Thu · 16:30","Силова підготовка":"Strength training","Техніка вправ зі штангою під наглядом тренера, помірні ваги.":"Barbell technique under a trainer's eye, moderate weights.","Пн, Ср, Пт · 17:30":"Mon, Wed, Fri · 17:30","Старший тренер":"Head trainer","Тренер з силової підготовки":"Strength coach","Тренерка групових програм":"Group programmes trainer","Фітнес-тренерка":"Fitness trainer","Тренер з воркауту":"Street workout coach","Тренер":"Trainer","Кросфіт":"CrossFit","Підлітки":"Teens","Жіноча група":"Women's group","Пауерліфтинг":"Powerlifting","Аеробіка":"Aerobics","Силові тренування":"Strength training","Бодібілдинг":"Bodybuilding","Реабілітація":"Rehabilitation","Керівник залу":"Gym manager","Адміністратор":"Front desk admin","Адміністраторка, ранкова зміна":"Front desk, morning shift","Адміністратор, вечірня зміна":"Front desk, evening shift","Абонементи в зал":"Gym memberships","Абонементи":"Memberships","Разове відвідування":"Single visit","8 відвідувань":"8 visits","діє 30 днів":"valid 30 days","12 відвідувань":"12 visits","Безліміт":"Unlimited","30 днів":"30 days","Дитячий / підлітковий":"Kids / teens","8 відвідувань, 30 днів":"8 visits, 30 days","Абонемент дає вхід у тренажерну зону. Групові або індивідуальні заняття оплачуються окремо.":"A membership gives access to the gym floor. Group and personal sessions are paid separately.","Групові заняття":"Group classes","Разове заняття":"Single class","фітнес, воркаут, функціональний":"fitness, street workout, functional","Пілатес, разове":"Pilates, single","8 групових занять":"8 group classes","будь-які напрями, 30 днів":"any class type, 30 days","Дитяча група, 8 занять":"Kids group, 8 classes","Перше групове заняття для нових клієнтів безкоштовне.":"The first group class is free for new clients.","Індивідуальні":"Personal","Персональне тренування":"Personal training session","60 хв":"60 min","Пакет 10 тренувань":"10-session package","діє 60 днів":"valid 60 days","Спліт-тренування":"Split session","для двох, 60 хв":"for two, 60 min","Дитяче індивідуальне":"Kids personal session","45 хв":"45 min","Програма тренувань":"Training programme","складання під вашу ціль":"built for your goal","Вхід у зал на час персонального тренування входить у ціну.":"Gym access during a personal session is included in the price.","Груповий фітнес":"Group fitness"};
+const ENN={"Сергій":"Serhii","Віктор":"Viktor","Олена":"Olena","Марія":"Mariia","Андрій":"Andrii","Тетяна":"Tetiana","Наталія":"Nataliia","Ігор":"Ihor","Шрек":"Shrek","Харлі":"Harley","Фіона":"Fiona","Джокер":"Joker"};
+const LAT={а:'a',б:'b',в:'v',г:'h',ґ:'g',д:'d',е:'e',є:'ie',ж:'zh',з:'z',и:'y',і:'i',ї:'i',й:'i',к:'k',л:'l',м:'m',н:'n',о:'o',п:'p',р:'r',с:'s',т:'t',у:'u',ф:'f',х:'kh',ц:'ts',ч:'ch',ш:'sh',щ:'shch',ь:'',ю:'iu',я:'ia','’':'','ʼ':"'"};
+const latin=w=>String(w).replace(/[А-Яа-яІіЇїЄєҐґ’ʼ]/g,c=>{const l=c.toLowerCase(),t=LAT[l]??c;return c===l?t:t.charAt(0).toUpperCase()+t.slice(1);});
+const enx=v=>typeof v==='string'?(ENX[v]??v):v;
 let lang='uk';
-try{const s=localStorage.getItem('zal-landing-lang');if(s==='uk'||s==='ru')lang=s;}catch(e){}
+try{const s=localStorage.getItem('zal-landing-lang');if(s==='uk'||s==='ru'||s==='en')lang=s;else if(!/^(uk|ru)/i.test(navigator.language||''))lang='en';}catch(e){}
 const L=()=>T[lang];
-const tr=x=>x==null?'':typeof x==='string'?x:(x[lang]??x.uk);
-const nm=n=>lang==='ru'?(TRN[n]||n):n;
+const tr=x=>{if(x==null)return'';if(typeof x==='string')return lang==='en'?enx(x):x;
+  if(lang==='en'){if(x.en!=null)return x.en;return Array.isArray(x.uk)?x.uk.map(enx):enx(x.uk);}return x[lang]??x.uk;};
+const nm=n=>lang==='ru'?(TRN[n]||n):lang==='en'?(ENN[n]||latin(n)):n;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money=p=>p.toLocaleString(L().loc)+' '+L().cur;
 const head=(ey,h,p)=>`<div class="sec-head"><span class="eyebrow">${ey}</span><h2>${h}</h2>${p?`<p>${p}</p>`:''}</div>`;
@@ -424,7 +447,7 @@ function openState(){
   if(h&&m>=toMin(h[0])&&m<toMin(h[1]))return{open:true,txt:`${L().openNow} ${h[1]}`};
   if(h&&m<toMin(h[0]))return{open:false,txt:`${L().closedNow} ${h[0]}`};
   // next working day (Sat/Sun and after closing time)
-  for(let i=1;i<=7;i++){const n=(d+i)%7;if(C.hours[n])return{open:false,txt:`${L().closedNow.replace(/\.[^.]*$/,'.')} ${L().nextOn} ${i===1?L().tomorrow:L().wdAt[n]} ${L().loc.startsWith('ru')?'в':'о'} ${C.hours[n][0]}`};}
+  for(let i=1;i<=7;i++){const n=(d+i)%7;if(C.hours[n])return{open:false,txt:`${L().closedNow.replace(/\.[^.]*$/,'.')} ${L().nextOn} ${i===1?L().tomorrow:L().wdAt[n]} ${L().at} ${C.hours[n][0]}`};}
   return{open:false,txt:L().closedNow};
 }
 
@@ -455,9 +478,9 @@ function render(){
 
   document.getElementById('aboutIn').innerHTML=head(l.aboutEy,l.aboutH,l.aboutP)+`
    <div class="area">
-    <div class="total"><b class="num">${area}</b><span class="muted">м² · ${l.total}</span></div>
-    <div class="areabar" role="img" aria-label="${esc(C.zones.map(z=>tr(z.n)+' '+z.m2+' м²').join(', '))}">${C.zones.map(z=>`<div style="flex:${z.m2};background:var(${z.c})"></div>`).join('')}</div>
-    <div class="legend">${C.zones.map(z=>`<div><i style="background:var(${z.c})"></i><span>${esc(tr(z.n))}</span><b>${z.m2} м²</b></div>`).join('')}</div>
+    <div class="total"><b class="num">${area}</b><span class="muted">${l.sqm} · ${l.total}</span></div>
+    <div class="areabar" role="img" aria-label="${esc(C.zones.map(z=>tr(z.n)+' '+z.m2+' '+l.sqm).join(', '))}">${C.zones.map(z=>`<div style="flex:${z.m2};background:var(${z.c})"></div>`).join('')}</div>
+    <div class="legend">${C.zones.map(z=>`<div><i style="background:var(${z.c})"></i><span>${esc(tr(z.n))}</span><b>${z.m2} ${l.sqm}</b></div>`).join('')}</div>
    </div>
    <div class="amen">${C.amen.map(a=>`<div class="am"><b class="num">${esc(tr(a.v))}${tr(a.u)?` <small style="font-size:18px;font-weight:600">${esc(tr(a.u))}</small>`:''}</b>${tr(a.t)?`<h3>${esc(tr(a.t))}</h3>`:''}${a.list?`<ul>${a.list.map(x=>`<li>${esc(tr(x))}</li>`).join('')}</ul>`:`<p>${esc(tr(a.d))}</p>`}</div>`).join('')}</div>`;
 
@@ -550,7 +573,7 @@ function applySite(d){
   return true;
 }
 // memberships: the sale plans of the app (view site_plans) fill the price group marked «plans» in the site editor
-const planSub=p=>p.visits==null?{uk:'безліміт, '+p.days+' днів',ru:'безлимит, '+p.days+' дней'}:p.visits===1?null:{uk:p.visits+' відвідувань, '+p.days+' днів',ru:p.visits+' посещений, '+p.days+' дней'};
+const planSub=p=>p.visits==null?{uk:'безліміт, '+p.days+' днів',ru:'безлимит, '+p.days+' дней',en:'unlimited, '+p.days+' days'}:p.visits===1?null:{uk:p.visits+' відвідувань, '+p.days+' днів',ru:p.visits+' посещений, '+p.days+' дней',en:p.visits+' visits, '+p.days+' days'};
 function applyPlans(list){
   if(!Array.isArray(list)||!list.length)return false;C.plans=list;
   const g=C.prices.find(x=>x.plans)||C.prices.find(x=>/абонемент/i.test(tr(x.t)));if(!g)return false;
