@@ -428,7 +428,7 @@ const ENN={"Сергій":"Serhii","Віктор":"Viktor","Олена":"Olena",
 const LAT={а:'a',б:'b',в:'v',г:'h',ґ:'g',д:'d',е:'e',є:'ie',ж:'zh',з:'z',и:'y',і:'i',ї:'i',й:'i',к:'k',л:'l',м:'m',н:'n',о:'o',п:'p',р:'r',с:'s',т:'t',у:'u',ф:'f',х:'kh',ц:'ts',ч:'ch',ш:'sh',щ:'shch',ь:'',ю:'iu',я:'ia','’':'','ʼ':"'"};
 const latin=w=>String(w).replace(/[А-Яа-яІіЇїЄєҐґ’ʼ]/g,c=>{const l=c.toLowerCase(),t=LAT[l]??c;return c===l?t:t.charAt(0).toUpperCase()+t.slice(1);});
 const WDX={Пн:'Mon',Вт:'Tue',Ср:'Wed',Чт:'Thu',Пт:'Fri',Сб:'Sat',Нд:'Sun'};
-const enx=v=>{if(typeof v!=='string')return v;if(ENX[v]!=null)return ENX[v];
+const enx=v=>{if(typeof v!=='string')return v;const k=v.trim().replace(/\s+/g,' ');if(ENX[k]!=null)return ENX[k];
   return /\d{1,2}:\d{2}/.test(v)?v.replace(/Пн|Вт|Ср|Чт|Пт|Сб|Нд/g,d=>WDX[d]).replace(/\s(і|та)\s/g,' and ').replace(/·(?=\S)/g,'· '):v;};
 let lang='uk';
 try{const s=localStorage.getItem('zal-landing-lang');if(s==='uk'||s==='ru'||s==='en')lang=s;else if(!/^(uk|ru)/i.test(navigator.language||''))lang='en';}catch(e){}
