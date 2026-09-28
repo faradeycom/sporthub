@@ -456,7 +456,7 @@ function openState(){
 function render(){
   const l=L();
   document.documentElement.lang=lang;
-  const ab=document.getElementById('appBtn');ab.href=C.appUrl;ab.innerHTML=`<span class="lg">${l.appBtn}</span><span class="sh">${l.appBtnS}</span>`;
+  const ab=document.getElementById('appBtn');ab.href=C.appUrl+(C.appUrl.indexOf('?')<0?'?':'&')+'lang='+lang;ab.innerHTML=`<span class="lg">${l.appBtn}</span><span class="sh">${l.appBtnS}</span>`;
   document.querySelectorAll('#langSeg button').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
   document.getElementById('nav').innerHTML=Object.entries(l.nav).map(([k,v])=>`<a href="#${k}">${v}</a>`).join('');
   const demo=document.getElementById('demo');demo.textContent=l.demo;demo.hidden=!!C.real;
