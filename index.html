@@ -120,6 +120,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .cta{display:flex;gap:10px;flex-wrap:wrap}
 .band{background:var(--band);color:var(--band-ink);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:18px}
 .band .open{display:flex;align-items:center;gap:10px;font-weight:600}
+.band .open+.open{margin-top:-8px}
+.ingym{display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid var(--band-line)}
+.ingym .h{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--band-muted)}
+.ingym .r{display:flex;gap:10px;align-items:baseline;justify-content:space-between}
+.ingym .r span{color:var(--band-muted);font-size:14px}
+.ingym .r b{text-align:right;font-weight:600}
+.ingym .r b.num{font-family:var(--display);font-size:24px;font-weight:800;line-height:1}
 .dot{width:10px;height:10px;border-radius:50%;background:var(--band-muted);flex:none}
 .dot.on{background:#3FBF77;box-shadow:0 0 0 4px rgba(63,191,119,.2)}
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--band-line);border-radius:10px;overflow:hidden}
@@ -366,7 +373,7 @@ uk:{loc:'uk-UA',cur:'₴',min:'хв',at:'о',sqm:'м²',demo:'Ціни, розк
  nav:{about:'Про зал',equipment:'Обладнання',classes:'Заняття',team:'Команда',prices:'Ціни',contacts:'Контакти',find:'Як нас знайти'},
  fEy:'Як нас знайти',fH:'Кривий Ріг, Павла Глазового, 15',fP:'Натисніть «Прокласти маршрут», і Google Карти поведуть вас прямо до входу в зал.',route:'Прокласти маршрут',openMap:'Відкрити в Google Картах',routeHint:'На телефоні відкриється застосунок Google Карти з маршрутом від вашого місця.',
  heroEy:'Sport Hub · тренажерний зал у Кривому Розі',heroH:'Зал без черги <em>до тренажерів</em>',heroP:'Невеликий зал з фірмовим обладнанням. Силова зона, пілатес, фітнес і воркаут для дорослих, окремі групи для дітей і підлітків. Тепло взимку, душ і роздягальня.',
- toPrices:'Ціни',toTrial:'Пробне заняття',openNow:'Зараз відчинено, до',closedNow:'Зараз зачинено. Відкриємося о',m2:'м² площі',eq:'тренажерів і станцій',tr:'тренерів',daily:'пн–пт, години роботи',dayOff:'Вихідний',trainOnly:'лише персональні та групові за записом',nextOn:'Відкриємося',tomorrow:'завтра',wdAt:['у понеділок','у вівторок','у середу','у четвер','у пʼятницю','у суботу','у неділю'],
+ toPrices:'Ціни',toTrial:'Пробне заняття',openNow:'Зараз відчинено, до',admin1:'Адміністратор',adminN:'Адміністратори',inGym:'Зараз у залі',trNow:'Тренери',noTr:'зараз немає',visNow:'Відвідувачів',closedNow:'Зараз зачинено. Відкриємося о',m2:'м² площі',eq:'тренажерів і станцій',tr:'тренерів',daily:'пн–пт, години роботи',dayOff:'Вихідний',trainOnly:'лише персональні та групові за записом',nextOn:'Відкриємося',tomorrow:'завтра',wdAt:['у понеділок','у вівторок','у середу','у четвер','у пʼятницю','у суботу','у неділю'],
  aboutEy:'Про зал',aboutH:'Площа і зручності',aboutP:'Розподіл площі по зонах, м².',total:'загальна площа',
  eqEy:'Обладнання',eqH:'Що є для кожного типу занять',eqP:'Кількість тренажерів і станцій по зонах.',units:'одиниць',places:'місць',
  qT:'Фірмове обладнання',qP:'Усі тренажери фірмові, від перевірених виробників. Ми регулярно їх обслуговуємо, тож усе справне й безпечне.',
@@ -380,7 +387,7 @@ ru:{loc:'ru-UA',cur:'₴',min:'мин',at:'в',sqm:'м²',demo:'Цены, рас
  nav:{about:'О зале',equipment:'Оборудование',classes:'Занятия',team:'Команда',prices:'Цены',contacts:'Контакты',find:'Как нас найти'},
  fEy:'Как нас найти',fH:'Кривой Рог, Павла Глазового, 15',fP:'Нажмите «Проложить маршрут», и Google Карты приведут вас прямо ко входу в зал.',route:'Проложить маршрут',openMap:'Открыть в Google Картах',routeHint:'На телефоне откроется приложение Google Карты с маршрутом от вашего места.',
  heroEy:'Sport Hub · тренажёрный зал в Кривом Роге',heroH:'Зал без очереди <em>к тренажёрам</em>',heroP:'Небольшой зал с фирменным оборудованием. Силовая зона, пилатес, фитнес и воркаут для взрослых, отдельные группы для детей и подростков. Тепло зимой, душ и раздевалка.',
- toPrices:'Цены',toTrial:'Пробное занятие',openNow:'Сейчас открыто, до',closedNow:'Сейчас закрыто. Откроемся в',m2:'м² площади',eq:'тренажёров и станций',tr:'тренеров',daily:'пн–пт, часы работы',dayOff:'Выходной',trainOnly:'только персональные и групповые по записи',nextOn:'Откроемся',tomorrow:'завтра',wdAt:['в понедельник','во вторник','в среду','в четверг','в пятницу','в субботу','в воскресенье'],
+ toPrices:'Цены',toTrial:'Пробное занятие',openNow:'Сейчас открыто, до',admin1:'Администратор',adminN:'Администраторы',inGym:'Сейчас в зале',trNow:'Тренеры',noTr:'сейчас нет',visNow:'Посетителей',closedNow:'Сейчас закрыто. Откроемся в',m2:'м² площади',eq:'тренажёров и станций',tr:'тренеров',daily:'пн–пт, часы работы',dayOff:'Выходной',trainOnly:'только персональные и групповые по записи',nextOn:'Откроемся',tomorrow:'завтра',wdAt:['в понедельник','во вторник','в среду','в четверг','в пятницу','в субботу','в воскресенье'],
  aboutEy:'О зале',aboutH:'Площадь и удобства',aboutP:'Распределение площади по зонам, м².',total:'общая площадь',
  eqEy:'Оборудование',eqH:'Что есть для каждого типа занятий',eqP:'Количество тренажёров и станций по зонам.',units:'единиц',places:'мест',
  qT:'Фирменное оборудование',qP:'Все тренажёры фирменные, от проверенных производителей. Мы регулярно их обслуживаем, поэтому всё исправно и безопасно.',
@@ -394,7 +401,7 @@ en:{loc:'en-GB',cur:'₴',min:'min',at:'at',sqm:'m²',demo:'Prices, schedule, tr
  nav:{about:'About',equipment:'Equipment',classes:'Classes',team:'Team',prices:'Prices',contacts:'Contacts',find:'Find us'},
  fEy:'Find us',fH:'Kryvyi Rih, 15 Pavla Hlazovoho St.',fP:'Tap «Get directions» and Google Maps will take you right to the gym entrance.',route:'Get directions',openMap:'Open in Google Maps',routeHint:'On a phone, the Google Maps app opens with a route from where you are.',
  heroEy:'Sport Hub · a gym in Kryvyi Rih',heroH:'A gym with no queues <em>for the machines</em>',heroP:'A compact gym with branded equipment. Strength zone, pilates, fitness and street workout for adults, separate groups for kids and teens. Warm in winter, showers and a locker room.',
- toPrices:'Prices',toTrial:'Trial session',openNow:'Open now, until',closedNow:'Closed now. We open at',m2:'m² of space',eq:'machines and stations',tr:'trainers',daily:'Mon–Fri, opening hours',dayOff:'Closed',trainOnly:'personal and group sessions by booking only',nextOn:'We open',tomorrow:'tomorrow',wdAt:['on Monday','on Tuesday','on Wednesday','on Thursday','on Friday','on Saturday','on Sunday'],
+ toPrices:'Prices',toTrial:'Trial session',openNow:'Open now, until',admin1:'Front desk',adminN:'Front desk',inGym:'In the gym now',trNow:'Trainers',noTr:'none right now',visNow:'Visitors',closedNow:'Closed now. We open at',m2:'m² of space',eq:'machines and stations',tr:'trainers',daily:'Mon–Fri, opening hours',dayOff:'Closed',trainOnly:'personal and group sessions by booking only',nextOn:'We open',tomorrow:'tomorrow',wdAt:['on Monday','on Tuesday','on Wednesday','on Thursday','on Friday','on Saturday','on Sunday'],
  aboutEy:'About',aboutH:'Space and amenities',aboutP:'Floor area by zone, m².',total:'total area',
  eqEy:'Equipment',eqH:'What we have for each type of training',eqP:'Machines and stations by zone.',units:'units',places:'places',
  qT:'Branded equipment',qP:'All machines are branded, from trusted manufacturers. We service them regularly, so everything works and is safe.',
@@ -453,6 +460,14 @@ function openState(){
   return{open:false,txt:L().closedNow};
 }
 
+// «now in the gym» from the app: administrators and trainers on shift, visitors inside (public.site_now)
+let NOW=null;
+function nowHtml(l){
+  if(!NOW)return '';const a=NOW.admins||[],t=NOW.trainers||[],v=+NOW.visitors||0;
+  if(!a.length&&!t.length&&!v)return '';
+  return (a.length?`<div class="open"><span class="dot on"></span><span>${a.length>1?l.adminN:l.admin1}: ${esc(a.map(nm).join(', '))}</span></div>`:'')+
+   `<div class="ingym"><span class="h">${l.inGym}</span><div class="r"><span>${l.trNow}</span><b>${t.length?esc(t.map(nm).join(', ')):l.noTr}</b></div><div class="r"><span>${l.visNow}</span><b class="num">${v}</b></div></div>`;
+}
 function render(){
   const l=L();
   document.documentElement.lang=lang;
@@ -469,6 +484,7 @@ function render(){
     <div class="cta"><a class="btn primary" href="#prices">${l.toPrices}</a><a class="btn" href="#contacts">${l.toTrial}</a></div></div>
    <div class="band">
     <div class="open"><span class="dot ${st.open?'on':''}"></span><span class="num">${st.txt}</span></div>
+    ${nowHtml(l)}
     <div class="facts">
      <div class="fact"><b class="num">${area}</b><span>${l.m2}</span></div>
      <div class="fact"><b class="num">${eqN}</b><span>${l.eq}</span></div>
@@ -608,6 +624,10 @@ Promise.all(SRC.map(([k,fn,q,pick])=>fetch(SB+'/rest/v1/'+q,{headers:{apikey:SBK
     return !same&&fn(d);}).catch(()=>false)))
   .then(ch=>{if(ch.some(Boolean))render();});
 render();
+// live: on load and every 2 minutes while the page is open
+function loadNow(){fetch(SB+'/rest/v1/rpc/site_now',{method:'POST',headers:{apikey:SBK,Authorization:'Bearer '+SBK,'Content-Type':'application/json'},body:'{}'})
+  .then(r=>r.ok?r.json():null).then(d=>{if(d&&JSON.stringify(d)!==JSON.stringify(NOW)){NOW=d;render();}}).catch(()=>{});}
+loadNow();setInterval(()=>{if(!document.hidden)loadNow();},120000);
 })();
 </script>
 
