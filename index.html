@@ -480,7 +480,7 @@ function render(){
   const st=openState();
   document.getElementById('hero').innerHTML=`
    <div class="hero-l"><span class="eyebrow">${l.heroEy}</span><h1>${l.heroH}</h1><p class="lead">${l.heroP}</p>
-    <div class="cta"><a class="btn primary" href="#prices">${l.toPrices}</a></div></div>
+    <div class="cta"><a class="btn primary" href="#prices">${l.toPrices}</a><a class="btn" href="#classes">${l.nav.classes}</a><a class="btn" href="#find">${l.nav.find}</a></div></div>
    <div class="band">
     <div class="open"><span class="dot ${st.open?'on':''}"></span><span class="num">${st.txt}</span></div>
     ${st.open?nowHtml(l):''}
